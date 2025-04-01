@@ -10,12 +10,12 @@ public class GamePlayer : MonoBehaviour
     public float GameTimer;
     public bool IsPlaying;
 
-    private void start()
+    private void Start()
     {
 
     }
-
-    private void undate()
+    
+    private void Update()
     {
         if (!IsPlaying)
         {
@@ -31,10 +31,10 @@ public class GamePlayer : MonoBehaviour
     }
 
 
-    private void OnTriggerEneter (Collider other)
+    private void OnTriggerEnter (Collider other)
     {
         bool isEnemy = other.gameObject.tag == "Enemy";
-        bool isItem = other.gameObject.tag == "Itme";
+        bool isItem = other.gameObject.tag == "Item";
 
         if (isEnemy)
         {
